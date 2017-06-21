@@ -1,4 +1,12 @@
 #!/bin/bash
+
+# Check if required programs are installed. 
+if ! [ -x "$(command -v virtualenv)" ]; then
+  echo 'Error: virtualenv is not installed.' >&2
+  echo 'Try: "sudo pip install virtualenv" or "sudo yum install python-virtualenv" or "sudo apt-get install virtualenv" to install it.' >&2
+  exit 1
+fi
+
 set -e
 cd "$(dirname "${BASH_SOURCE[0]}")"
 
