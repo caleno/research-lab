@@ -39,8 +39,10 @@ Check your setup with `terraform plan --var-file=local.tfvars`, then bring up
 the bare machines with `terraform apply --var-file=local.tfvars`. The job
 prints out an ansible inventory at the end.
 
-The run_dev.sh script (under development) will in addition create securitygroups
+The `run_dev.sh script` (under development) will in addition create securitygroups
 and apply the ansible setup.
+
+Remmember to open up the firewall in Openstack for your IP on port 22, 8443.
 
 ### Debugging / verbose output
 
